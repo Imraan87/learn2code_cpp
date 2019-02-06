@@ -65,5 +65,32 @@ return _Log;
 
 }
 
+pll_t LogFile::getPLLData(){
+
+	smatch m;
+	pll_t pll;
+	string s = _Log;
+
+	//regex e ("chip name      = (\w+) (\w+)");
+	//regex e ("chip name      = \\S+");
+	regex e ("<:[a-z]+ [0-9]+:>");//("<:pll [0-9]+:>"); //("<:pll (.*):>");
+
+	if(regex_search (_Log,m,e))
+	{
+		cout << m.size() << endl << m.position(0) << endl;
+
+//		for (unsigned i=0; i<m.size(); ++i) {
+//		    std::cout << "[" << m[i] << "] ";
+//		  }
+		while (regex_search (s,m,e)) {
+		    for (auto x:m) cout << x << " ";
+		    cout << endl;
+		    s = m.suffix().str();
+		  }
+
+	}
+
+	return pll;
+}
 
 

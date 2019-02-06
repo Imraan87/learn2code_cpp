@@ -987,7 +987,7 @@ classdef MCU_Log_file < handle
             %             findobj('Type','figure')
             FigNme = sprintf('%s_%d_PLL_Calibration',IPtype,obj.SingleLog.(IPtype)(StructNo).IPNo);
             figure(figH)
-            set(figH,'name',FigNme,'FileName',FigNme,'Visible','off')
+            set(figH,'name',FigNme,'FileName',FigNme,'Visible','on')
             
             BandStep = 1024/(numel(obj.SingleLog.(IPtype)(StructNo).PLL_Load.vsign_wide')-1);
             x        = repmat((0:BandStep:1024)',[1 2]);
@@ -1071,7 +1071,7 @@ classdef MCU_Log_file < handle
             %             obj.SingleLog.(IPtype)(StructNo).PLL_Load
             FigNme = sprintf('%s_%d_rfbuffergainsweep',IPtype,obj.SingleLog.(IPtype)(StructNo).IPNo);
             figure(figH)
-            set(figH,'name',FigNme,'FileName',FigNme,'Visible','off')
+            set(figH,'name',FigNme,'FileName',FigNme,'Visible','on')
             
             maxind   = obj.SingleLog.(IPtype)(StructNo).PLL_Load.maxind;
             pk_vcm   = obj.SingleLog.(IPtype)(StructNo).PLL_Load.pk_vcm;

@@ -5,13 +5,14 @@
  *      Author: IIBRAH
  */
 
-#ifndef LOGFILE_H_
-#define LOGFILE_H_
+#pragma once
 
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <regex>
+
+#include "../data_parser/data_def.h"
 
 using namespace std;
 
@@ -27,6 +28,7 @@ public:
 	void reset();
 	string outputLog();
 	string getChipName();
+	pll_t getPLLData();
 
 protected:
 	string _Log;
@@ -34,4 +36,3 @@ protected:
 
 };
 
-#endif /* LOGFILE_H_ */
