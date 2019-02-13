@@ -11,10 +11,11 @@ string DataParser::getData(string &Log, string &IP)
 {
 	smatch match_section;
 	regex epxr(SECTION_EXPR_STR);//partitionS
-	basic_partition_t DataBlock;
+	basic_partition_t DataBlock[100];
 
-	DataBlock = partition_txt(Log);
 
+	partition_txt(Log);
+    /*/
 	while (regex_search (Log, match_section, epxr))
 	{
 
@@ -22,24 +23,27 @@ string DataParser::getData(string &Log, string &IP)
 		cout << DataBlock.header << endl << DataBlock.datastr << endl << DataBlock.header  << endl;
 		Log = match_section.suffix().str();
 	}
+    /*/
+	cout << partitions[sz].header << endl;// << DataBlock[sz].datastr << endl << DataBlock[sz].header << endl;
+
 	return "";
 }
 
-basic_partition_t DataParser::partition_txt(string Log)
+void DataParser::partition_txt(string Log)
 {
 	smatch match_section;
 	regex epxr(SECTION_EXPR_STR);
-	basic_partition_t partitions;
+
 
 	while (regex_search (Log, match_section, epxr))
 	{
 
-		partitions = getPartitionBlock(match_section[0], Log);
-		Log        = match_section.suffix().str();
-
-		cout << partitions.header << endl << partitions.datastr << endl << partitions.header  << endl;
+		partitions[sz] = getPartitionBlock(match_section[0], Log);
+		Log            = match_section.suffix().str();
+		sz             = sz + 1;
 	}
-	return partitions;
+	sz  = sz - 1;
+	return;
 }
 
 

@@ -34,8 +34,12 @@ public:
 	//const regex IP_EXPR   = "<:[a-z]+ [0-9]+:>";
 	//const regex Data_EXPR = "\\[:([a-z]+) ([0-9]+) :\\]";
 	//string IP;
+	int sz     = 0;
+	int max_sz = 1000;
+	basic_partition_t partitions[1000];
+
 	string getData(string &Log, string &IP);
-	basic_partition_t partition_txt(string Log);
+	void partition_txt(string Log);
 	basic_partition_t getPartitionBlock(string Header, string Log);
 	string getDataStr(string Log);
 	string getDataStrOrig(string &Log, string &IP);
