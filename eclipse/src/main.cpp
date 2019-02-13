@@ -29,7 +29,7 @@ int main(){
 
 	string LogOut = Log.outputLog();
 
-	b.getData(LogOut);
+	b.getData1(LogOut);
 
 	return 0;
 }

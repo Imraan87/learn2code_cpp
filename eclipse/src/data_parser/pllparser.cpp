@@ -17,10 +17,10 @@ pll_parser::~pll_parser() {
 	// TODO Auto-generated destructor stub
 }
 
-pll_t pll_parser::getData(string Log){
+pll_t pll_parser::getData1(string Log){
 
 
-	string DataStr = getDataStr(Log, IP);
+	string DataStr = getData(Log, IP);
 
 	cout << DataStr << endl;
 

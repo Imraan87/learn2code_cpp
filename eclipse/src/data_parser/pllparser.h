@@ -16,6 +16,6 @@ public:
 	const char *ID   = "pll";
 	string IP;
 
-	pll_t getData(string Log);
+	pll_t getData1(string Log);
 };
 
