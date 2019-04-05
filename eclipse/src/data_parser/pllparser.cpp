@@ -20,7 +20,7 @@ pll_parser::~pll_parser() {
 pll_t pll_parser::getData1(string Log){
 
 
-	string DataStr = getData(Log, IP);
+	string DataStr = getData(Log);
 
 	cout << DataStr << endl;
 

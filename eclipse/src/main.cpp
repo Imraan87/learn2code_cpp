@@ -23,13 +23,16 @@ int main(){
 
 	//cout << Log.outputLog() << endl << endl;
 
-	//pll_t a = Log.getPLLData();
 
-	pll_parser b;
+
+
+	DataParser b;
 
 	string LogOut = Log.outputLog();
 
-	b.getData1(LogOut);
+	b.getData(LogOut);
+
+
 
 	return 0;
 }
