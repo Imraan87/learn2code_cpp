@@ -10,6 +10,7 @@
 
 void StringConverter::str2num(char *num, std::string  str, int  mx_sz)
 {
+	std::cout << typeid(*num).name() << std::endl;
 	std::string::size_type sz;
 	for (int ii  = 0; ii < mx_sz; ii++)
 	{
@@ -21,6 +22,7 @@ void StringConverter::str2num(char *num, std::string  str, int  mx_sz)
 
 void StringConverter::str2num(int *num, std::string  str, int  mx_sz)
 {
+	std::cout << typeid(*num).name() << std::endl;
 	std::string::size_type sz;
 	for (int ii  = 0; ii < mx_sz; ii++)
 	{
@@ -32,6 +34,7 @@ void StringConverter::str2num(int *num, std::string  str, int  mx_sz)
 
 void StringConverter::str2num(float *num, std::string  str, int  mx_sz)
 {
+	std::cout << typeid(*num).name() << std::endl;
 	std::string::size_type sz;
 	for (int ii  = 0; ii < mx_sz; ii++)
 	{
@@ -43,6 +46,7 @@ void StringConverter::str2num(float *num, std::string  str, int  mx_sz)
 
 void StringConverter::str2num(double *num, std::string  str, int  mx_sz)
 {
+	std::cout << typeid(*num).name() << std::endl;
 	std::string::size_type sz;
 	for (int ii  = 0; ii < mx_sz; ii++)
 	{

@@ -5,7 +5,8 @@
  *      Author: IIBRAH
  */
 #include <string>
-
+#include <typeinfo>
+#include <iostream>
 
 #ifndef SRC_DATA_PARSER_STRINGCONVERTER_H_
 #define SRC_DATA_PARSER_STRINGCONVERTER_H_
