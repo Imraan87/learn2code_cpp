@@ -32,6 +32,8 @@ int main(){
 
 	b.getData(LogOut);
 
+    // use std::cin.get() to leave console open
+	cin.get();
 
 
 	return 0;
