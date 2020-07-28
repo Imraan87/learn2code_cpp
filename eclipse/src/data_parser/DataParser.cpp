@@ -125,6 +125,8 @@ void DataParser::partitionHeader(header_t& Header, string Str)
 	regex Expr(ExprStr);
 	regex_search (Str, match_section, Expr);
 
+	printSmatchDebug(Str, match_section);
+
 	switch (match_section.size())
 	{
 	case 5: str2num(&Header.Dim2Sz, match_section[4], 1); // @suppress("No break at end of case")
@@ -302,4 +304,14 @@ string DataParser::getDataStrOrig(string &Log, string &IP)
 		}
 	}
 	return "";
+}
+
+void DataParser::printSmatchDebug(string &mystr, smatch match_section)
+{
+	cout << "Input Str: " << mystr << "\n";
+	cout << match_section.size() << " matches found:" << "\n";
+	for (unsigned  i = 0; i < match_section.size(); i++) {
+	  cout <<  i << ":" << match_section[i] << "\n";
+	}
+	cout << "\n" << endl;
 }

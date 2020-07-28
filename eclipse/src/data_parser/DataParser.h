@@ -99,6 +99,7 @@ public:
     void min_indx(int &indx);
 	string getDataStrOrig(string &Log, string &IP);
 	void testconversion(basic_data_t& data);
+	void printSmatchDebug(string &myStr, smatch match_section);
 	//regex ip_epxr;// = &Expr1;
 
 
