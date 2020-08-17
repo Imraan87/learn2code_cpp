@@ -83,8 +83,8 @@ public:
 	//string IP;
 	int sz[2]     = {0, 0};
 	int max_sz[2] = {0, 0};
-	basic_partition_t *partitions;
-	basic_data_t      *trace;
+	basic_partition_t *partitions = nullptr;
+	basic_data_t      *trace      = nullptr;
 
 	DataParser();
 
